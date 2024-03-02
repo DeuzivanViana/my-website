@@ -1,0 +1,90 @@
+import { Bar } from "@/app/Bar"
+import { Banner } from "../Banner"
+import { Layout } from "../Layout"
+import { NavigationBar } from "../NavigationBar"
+import { Project } from "../Project"
+
+export const App = () => {
+    return (
+        <Layout>
+            <NavigationBar/>
+            <div className='max-w-screen-sm m-auto'>
+                <Banner/>
+                <h1 className='text-xl text-white p-4 text-center'>Resume</h1>
+                <p className='text-xs text-center text-neutral-600 p-4 pt-0'><strong>WARNING</strong>: Bars are for conceptual visualization of my ability</p>
+                <Bar
+                    title={'Web Development (JavaScript, Next.JS, Prisma...)'}
+                    progress={56}/>
+                <Bar
+                    title={'C/C++ (SDL2, SFML, ImGUI, SQLite3...)'}
+                    progress={72}/>
+                <Bar
+                    title={'MongoDB, SQLite3, Postgres...'}
+                    progress={44}/>
+                <Bar
+                    title={'Python 3.X (Pygame, Matplotlib...)'}
+                    progress={52}/>
+
+                <h1 className='text-xl text-white p-4 text-center'>Real Projects</h1>
+                <Project
+                    title={'Fhê Soares'}
+                    description={'Landing page to demonstrate him projects as a photographer and expose him work to the most distant audiences.'}
+                    src_list={['/projects/fehsoares_001.png', '/projects/fehsoares_002.png', '/projects/fehsoares_003.png', '/projects/fehsoares_004.png']}
+                    href="https://www.fehsoares.com.br/"
+                    />
+                <Project
+                    title={'Anuncia Comigo'}
+                    description={'A simple page based on an example proposed by the client. Simple Landing Page.'}
+                    src_list={['/projects/anunciacomigo_001.png', '/projects/anunciacomigo_002.png', '/projects/anunciacomigo_003.png']}
+                    href="https://anunciacomigo.com/"
+                    />
+                
+                <h1 className="text-xl text-white p-4 text-center">Personal Projects</h1>
+                <Project
+                    title={'Fazueli Wallet'}
+                    description={'An attempt to try to simulate the processes of a digital wallet, using a database and other security mechanisms. Project just to understand some banking concepts.'}
+                    src_list={['/projects/fazueli-wallet-001.png', '/projects/fazueli-wallet-002.png', '/projects/fazueli-wallet-003.png', '/projects/fazueli-wallet-004.png', '/projects/fazueli-wallet-005.png', '/projects/fazueli-wallet-006.png']}
+                    />
+                <Project
+                    title={'Basic Blog UI (Responsive)'}
+                    description={'A project when I was relatively starting to deal with some very complex concepts, was to understand how some processes can occur.'}
+                    src_list={['/projects/blog_001.png', '/projects/blog_002.png', '/projects/blog_003.png', '/projects/blog_004.png', '/projects/blog_005.png', ]}
+                    />
+                <Project
+                    title={'Platform Game v1'}
+                    description={'Platform game with random world generation and other important concepts for a good mathematical understanding of physics and other related topics.'}
+                    src_list={['/projects/platform_001.png', '/projects/platform_002.png', '/projects/platform_003.png']}
+                    />
+                <Project
+                    title={'Platform Game v2'}
+                    description={'Another version of a platform game, but with more complexity containing random world generation, structure generation and ore generation with rarity and depth mechanisms.'}
+                    src_list={['/projects/platform2_001.png', '/projects/platform2_002.png', '/projects/platform2_003.png', '/projects/platform2_004.png']}
+                    />
+                <Project
+                    title={'Rocket Simulation (I Think XD)'}
+                    description={'Applying the concepts of the law of universal gravitation and particle generation, this project aims to train my skills with gravity and concepts of orbiting with rockets.'}
+                    src_list={['/projects/rocket_001.png', '/projects/rocket_002.png']}
+                    />
+                <Project
+                    title={'Particle System 0.0.1'}
+                    description={'A simple project that applied interesting knowledge to a mathematical basis.'}
+                    src_list={['/projects/particle_001.png', '/projects/particle_002.png', '/projects/particle_003.png']}
+                    />
+                <Project
+                    title={'NooBank (For Noob?)'}
+                    description={'Just an interface that should be implemented in my application for simulating systematic banking processes and others (many simple ones).'}
+                    src_list={['/projects/noobank_001.png', '/projects/noobank_002.png']}
+                    />
+                <Project
+                    title={'Tile Loader'}
+                    description={'A program that loads a tileset in an unusual way that I came up with, but I don\'t know for sure if this application exists, but probably yes, as it is a relatively basic but complex concept at the same time.'}
+                    src_list={['/projects/tileload_001.png', '/projects/tileload_002.png', '/projects/tileload_003.png', '/projects/tileload_004.png']}
+                    />
+            </div>
+
+            <footer className="bg-neutral-950">
+                <span className="block text-neutral-700 text-xs text-center p-6">© 2023 Deuzivan Lima</span>
+            </footer>
+        </Layout>
+    )
+}
