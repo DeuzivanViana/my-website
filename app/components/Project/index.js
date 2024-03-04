@@ -18,14 +18,14 @@ export const Project = ( { title, description, src_list, href = "#" } ) => {
     return (
         <div className="text-white bg-neutral-900 p-4 m-4 rounded-xl shadow-sm">
             <Image
-                className="rounded-xl w-full"
+                className="rounded-xl w-full object-cover object-center"
                 src={src_list[img_index]}
                 width={700}
                 height={700}/>
 
             <h1 className="pt-4 text-xl text-center">{ title }</h1>
             <p className="text-sm p-4 text-neutral-500">{ description }</p>
-            <Link href={href} className="bg-indigo-500 p-3 block rounded-xl text-center text-sm">VIEW</Link>
+            <Link href={href} className="bg-indigo-500 p-3 block rounded-xl text-center text-sm hover:bg-indigo-300">VIEW</Link>
         </div>
     )
 }

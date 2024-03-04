@@ -41,9 +41,20 @@ export const App = () => {
                 
                 <h1 className="text-xl text-white p-4 text-center">Personal Projects</h1>
                 <Project
+                    title={'Flipper Ino - Firmware'}
+                    description={'Flipper Ino is a project inspired by Flipper Zero, its objective is to have pentest features, hardware hacking, etc. The project is currently in the improvement stage, but its menu base is complete.'}
+                    src_list={['/projects/flipper-ino-001.jpg', '/projects/flipper-ino-002.jpg', '/projects/flipper-ino-003.jpg']}
+                    href="https://github.com/xoksync/Flipper-Ino-A03"
+                    />
+                <Project
                     title={'Fazueli Wallet'}
                     description={'An attempt to try to simulate the processes of a digital wallet, using a database and other security mechanisms. Project just to understand some banking concepts.'}
                     src_list={['/projects/fazueli-wallet-001.png', '/projects/fazueli-wallet-002.png', '/projects/fazueli-wallet-003.png', '/projects/fazueli-wallet-004.png', '/projects/fazueli-wallet-005.png', '/projects/fazueli-wallet-006.png']}
+                    />
+                <Project
+                    title={'NooBank (For Noob?)'}
+                    description={'Just an interface that should be implemented in my application for simulating systematic banking processes and others (many simple ones).'}
+                    src_list={['/projects/noobank_001.png', '/projects/noobank_002.png']}
                     />
                 <Project
                     title={'Basic Blog UI (Responsive)'}
@@ -69,11 +80,6 @@ export const App = () => {
                     title={'Particle System 0.0.1'}
                     description={'A simple project that applied interesting knowledge to a mathematical basis.'}
                     src_list={['/projects/particle_001.png', '/projects/particle_002.png', '/projects/particle_003.png']}
-                    />
-                <Project
-                    title={'NooBank (For Noob?)'}
-                    description={'Just an interface that should be implemented in my application for simulating systematic banking processes and others (many simple ones).'}
-                    src_list={['/projects/noobank_001.png', '/projects/noobank_002.png']}
                     />
                 <Project
                     title={'Tile Loader'}
