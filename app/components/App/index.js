@@ -1,4 +1,4 @@
-import { Bar } from "@/app/Bar"
+import { Bar } from "../Bar"
 import { Banner } from "../Banner"
 import { Layout } from "../Layout"
 import { NavigationBar } from "../NavigationBar"
