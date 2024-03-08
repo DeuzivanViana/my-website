@@ -37,9 +37,9 @@ export const Project = ( { title, description, src_list, href = "#" } ) => {
                 </motion.div>
             </AnimatePresence>
 
-            <h1 className="pt-4 text-xl text-center pt-[13.5rem]">{ title }</h1>
+            <h1 className="text-lg text-center pt-[13.5rem] text-neutral-300">{ title }</h1>
             <p className="text-sm p-4 text-neutral-500">{ description }</p>
-            <Link href={href} className="bg-indigo-500 p-3 block rounded-xl text-center text-sm hover:bg-indigo-300 ml-4 mr-4">VIEW</Link>
+            <Link href={href} className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-3 block rounded-xl text-center text-sm hover:bg-indigo-300 ml-4 mr-4">VIEW</Link>
         </motion.div>
     )
 }

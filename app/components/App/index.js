@@ -12,14 +12,14 @@ export const App = () => {
             <NavigationBar/>
             <div className='max-w-screen-sm m-auto'>
                 <Banner/>
-                <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className='text-xl text-white p-4 text-center'>Resume</motion.h1>
+                <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className='text-xl text-white p-4 uppercase text-center'><strong>SKILLS</strong></motion.h1>
                 <motion.p initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 2}} className='text-xs text-center text-neutral-600 p-4 pt-0'><strong>WARNING</strong>: Bars are for conceptual visualization of my ability</motion.p>
                 <Bar title={'Web Development (JavaScript, Next.JS, Prisma...)'} progress={56}/>
                 <Bar title={'C/C++ (SDL2, SFML, ImGUI, SQLite3...)'} progress={72}/>
                 <Bar title={'MongoDB, SQLite3, Postgres...'} progress={44}/>
                 <Bar title={'Python 3.X (Pygame, Matplotlib...)'} progress={52}/>
 
-                <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className='text-xl text-white p-4 text-center'>Real Projects</motion.h1>
+                <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className='text-xl uppercase text-white p-4 text-center'><strong>Real Projects</strong></motion.h1>
                 <Project
                     title={'Fhê Soares'}
                     description={'Landing page to demonstrate him projects as a photographer and expose him work to the most distant audiences.'}
@@ -33,7 +33,7 @@ export const App = () => {
                     href="https://anunciacomigo.com/"
                     />
                 
-                <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className="text-xl text-white p-4 text-center">Personal Projects</motion.h1>
+                <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className="text-xl uppercase text-white p-4 text-center"><strong>Personal Projects</strong></motion.h1>
                 <Project
                     title={'Flipper Ino - Firmware'}
                     description={'Flipper Ino is a project inspired by Flipper Zero, its objective is to have pentest features, hardware hacking, etc. The project is currently in the improvement stage, but its menu base is complete.'}
