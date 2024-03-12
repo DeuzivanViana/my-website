@@ -83,7 +83,7 @@ export const App = () => {
             </div>
 
             <footer className="bg-neutral-950">
-                <span className="block text-neutral-700 text-xs text-center p-6">© 2023 Deuzivan Lima</span>
+                <span className="block text-neutral-700 text-xs text-center p-6">© 2024 Deuzivan Lima</span>
             </footer>
         </Layout>
     )
