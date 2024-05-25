@@ -17,7 +17,7 @@ export const Project = ( { title, description, src_list, href = "#" } ) => {
     }, [img_index, src_list]);
 
     return (
-        <motion.div className="text-white bg-neutral-900 rounded-xl m-4 shadow-sm relative pb-6 p-2 overflow-hidden"
+        <motion.div className="text-white bg-neutral-900 rounded-xl m-4 shadow-sm relative pb-6 p-2 overflow-hidden z-10"
             initial={{opacity: 0, scale: 0.01}}
             whileInView={{opacity: 1, scale: 1}}
             transition={{duration: 0.3}}
