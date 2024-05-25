@@ -10,7 +10,7 @@ export const NavigationBar = () => {
         <>
             <nav className='bg-neutral-950 p-6 shadow-md flex justify-between'>
                 <h1 className='text-white'>Home</h1>
-                <Menu className='text-white z-10' onClick={() => setIsOpenMenu(!is_open_menu)}/>
+                <Menu className='text-white z-50' onClick={() => setIsOpenMenu(!is_open_menu)}/>
             </nav>
 
             <div className={'duration-500 bg-black w-[75%] h-[100%] fixed top-0 text-white pt-[5rem] ' +  (is_open_menu ? 'right-0' : 'right-[-100%]')}>
