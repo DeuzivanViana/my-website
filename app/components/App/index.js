@@ -26,13 +26,13 @@ export const App = () => {
                     title={'Fhê Soares'}
                     description={'Landing page to demonstrate him projects as a photographer and expose him work to the most distant audiences.'}
                     src_list={['/projects/fehsoares_001.png', '/projects/fehsoares_002.png', '/projects/fehsoares_003.png', '/projects/fehsoares_004.png']}
-                    href="https://www.fehsoares.com.br/"
+                    href="#"
                     />
                 <Project
                     title={'Anuncia Comigo'}
                     description={'A simple page based on an example proposed by the client. Simple Landing Page.'}
                     src_list={['/projects/anunciacomigo_001.png', '/projects/anunciacomigo_002.png', '/projects/anunciacomigo_003.png']}
-                    href="https://anunciacomigo.com/"
+                    href="#"
                     />
                 
                 <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className="text-xl uppercase text-white p-4 text-center"><strong>Personal Projects</strong></motion.h1>
