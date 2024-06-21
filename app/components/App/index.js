@@ -37,6 +37,12 @@ export const App = () => {
                 
                 <motion.h1 initial={{opacity: 0}} whileInView={{opacity: 1.5}} transition={{duration: 1}} className="text-xl uppercase text-white p-4 text-center"><strong>Personal Projects</strong></motion.h1>
                 <Project
+                    title={'Sandbox - Lazy Edition'}
+                    description={'A simple sandbox simulator made in Python to train my skills.'}
+                    src_list={['/projects/sandbox_001.jpeg', '/projects/sandbox_002.jpeg', '/projects/sandbox_003.jpeg']}
+                    href="https://github.com/DeuzivanLima/Lazy-Sandbox"
+                    />
+                <Project
                     title={'Flipper Ino - Firmware'}
                     description={'Flipper Ino is a project inspired by Flipper Zero, its objective is to have pentest features, hardware hacking, etc. The project is currently in the improvement stage, but its menu base is complete.'}
                     src_list={['/projects/flipper-ino-001.jpg', '/projects/flipper-ino-002.jpg', '/projects/flipper-ino-003.jpg']}
