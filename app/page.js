@@ -1,7 +1,7 @@
-import { App } from "./components/App";
-
 export default function Home() {
   return (
-    <App/>
+		<main className="flex item-center h-[100vh] bg-white">
+			<h1 className="text-4xl text-center p-4 place-content-center mb-48">O que tu está procura aqui? Calma lá, veja bem, entenda...</h1>
+		</main>
   );
 }
