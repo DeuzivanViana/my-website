@@ -1,0 +1,12 @@
+.basic_grid {
+    display: grid;
+    @media screen and (min-width: 720px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: 800px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (min-width: 800px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

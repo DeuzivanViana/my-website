@@ -17,7 +17,7 @@ export const Project = ( { title, description, src_list, href = "#" } ) => {
     }, [img_index, src_list]);
 
     return (
-        <motion.div className="text-white bg-neutral-900 rounded-xl m-4 shadow-sm relative pb-6 p-2 overflow-hidden z-10"
+        <motion.div className="text-white bg-neutral-900 rounded-xl m-4 shadow-sm relative pb-6 p-2 overflow-hidden z-10 grid"
             initial={{opacity: 0, scale: 0.01}}
             whileInView={{opacity: 1, scale: 1}}
             transition={{duration: 0.3}}
@@ -33,13 +33,15 @@ export const Project = ( { title, description, src_list, href = "#" } ) => {
                         className="rounded-xl object-cover object-center h-[180px] w-[100]"
                         src={src_list[img_index]}
                         width={700}
+                        alt="image about project"
                         height={700}/>
                 </motion.div>
             </AnimatePresence>
 
             <h1 className="text-lg text-center pt-[13.5rem] text-neutral-300">{ title }</h1>
             <p className="text-sm p-4 text-neutral-500">{ description }</p>
-            <Link href={href} className="bg-[#BFD7EA] p-3 block rounded-xl text-center text-sm hover:bg-indigo-300 ml-4 mr-4 text-neutral-900">VIEW</Link>
+
+            <Link href={href} className="bg-[#BFD7EA] self-end p-3 block rounded-xl text-center text-sm hover:bg-indigo-300 ml-4 mr-4 text-neutral-900">VIEW</Link>
         </motion.div>
     )
 }
