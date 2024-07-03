@@ -16,19 +16,19 @@ export const NavigationBar = () => {
             <div className={'duration-500 bg-black w-[75%] h-[100%] fixed top-0 text-white pt-[5rem] ' +  (is_open_menu ? 'right-0' : 'right-[-100%]')}>
                 <ul>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 border-b border-t hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                        <Link href={'#'} className='flex gap-4 p-4 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <MessageSquareText/>
                             <span>Blog</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 border-b border-t hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                        <Link href={'#'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <CreditCard/>
                             <span>Pix</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 border-b border-t hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                        <Link href={'#'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <BadgeHelp/>
                             <span>About</span>
                         </Link>
