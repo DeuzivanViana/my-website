@@ -17,13 +17,13 @@ export const Project = ( { title, description, src_list, href = "#"} ) => {
     }, [img_index, src_list]);
 
     return (
-        <motion.div className="text-white bg-neutral-900 rounded-3xl m-4 shadow-sm relative pb-6 p-2 overflow-hidden z-10 grid"
+        <motion.div className="text-white bg-neutral-900 rounded-3xl m-4 shadow-sm relative pb-6 p-4 overflow-hidden z-10 grid"
             initial={{opacity: 0, scale: 0.01}}
             whileInView={{opacity: 1, scale: 1}}
             transition={{duration: 0.3}}
         >
             <AnimatePresence>
-                <motion.div className="flex overflow-hidden absolute p-4"
+                <motion.div className="flex overflow-hidden absolute p-6"
                     key={src_list[img_index]}
                     initial={{ x: 300, opacity: 0}}
                     animate={{ x: 0, opacity: 1}}
