@@ -1,5 +1,5 @@
 'use client'
-import { Menu, MessageSquareText, BadgeHelp, CreditCard, MessageSquare } from 'lucide-react'
+import { Menu, MessageSquareText, BadgeHelp, CreditCard, MessageSquare, Home } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -17,6 +17,12 @@ export const NavigationBar = ({title = "Home"}) => {
                 <ul>
                     <li>
                         <Link href={'#'} className='flex gap-4 p-4 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                            <Home/>
+                            <span>Home</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'#'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <MessageSquareText/>
                             <span>Blog</span>
                         </Link>

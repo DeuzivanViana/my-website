@@ -1,10 +1,12 @@
 'use client'
+
 import { Bar } from "../Bar"
 import { Banner } from "../Banner"
 import { Layout } from "../Layout"
 import { NavigationBar } from "../NavigationBar"
 import { Project } from "../Project"
 import { motion } from "framer-motion"
+
 import styles from "./index.module.scss"
 
 export const App = () => {

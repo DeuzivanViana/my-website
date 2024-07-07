@@ -1,6 +1,6 @@
-export const Layout = ({children}) => {
+export const Layout = ({className, children}) => {
     return (
-        <main>
+        <main className={className}>
             { children }
         </main>
     )
