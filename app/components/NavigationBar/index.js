@@ -16,7 +16,7 @@ export const NavigationBar = ({title = "Home"}) => {
             <div className={'duration-500 bg-black w-[75%] max-w-[400px] h-[100%] fixed top-0 text-white pt-[5rem] z-10 ' +  (is_open_menu ? 'right-0' : 'right-[-100%]')}>
                 <ul>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                        <Link href={'/'} className='flex gap-4 p-4 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <Home/>
                             <span>Home</span>
                         </Link>
@@ -34,7 +34,7 @@ export const NavigationBar = ({title = "Home"}) => {
                         </Link>
                     </li>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                        <Link href={'/chat'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <MessageSquare/>
                             <span>Chat Me</span>
                         </Link>

@@ -4,9 +4,11 @@ import { db } from "@/db"
 export const POST = async (req) => {
     const data = await req.json()
 
-    await db.message.create({data: {
-        content: data.content
-    }})
+    if(data.content.length <= 64 && data.content.length > 0) {
+        await db.message.create({data: {
+            content: data.content
+        }})
+    }
 
     return NextResponse.json({})
 }

@@ -4,6 +4,12 @@ import { Layout } from "../Layout"
 import { NavigationBar } from "../NavigationBar"
 import { useEffect, useState } from "react"
 
+const formatDate = (time) => {
+    let date = new Date(time)
+
+    return ` ${date.getDate()}/${date.getMonth()}/${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}`
+}
+
 export const Chat = () => {
     const [messages, setMessages] = useState([])
     const [content, setContent] = useState("")
@@ -18,17 +24,21 @@ export const Chat = () => {
     }, [updateChat])
     
     const submitMessage = async () => {
-        await fetch("/api/send-message", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            cache: "no-store",
-            body: JSON.stringify({content: content})
-        })
-
-        setUpdateChat(updateChat + 1)
-        setContent("")
+        if(content.length <= 64 && content.length > 0) {
+            await fetch("/api/send-message", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                cache: "no-store",
+                body: JSON.stringify({content: content})
+            })
+    
+            setUpdateChat(updateChat + 1)
+            setContent("")
+        } else {
+            alert("The max characters is 64 and not can be empty")
+        }
     }
 
     return (
@@ -39,9 +49,10 @@ export const Chat = () => {
                     
                     messages.map((val) => {
                         return (
-                            <li className="bg-neutral-900 rounded-3xl p-4" key={val.id}>
-                                <p>{ val.content } </p>
-                                <p className="text-neutral-500 text-sm">{ val.id }</p>
+                            <li className="bg-neutral-900 rounded-3xl p-4 break-words" key={val.id}>
+                                <p className="text-neutral-500 text-sm">Post ID: { val.id }</p>
+                                <p>{ val.content }</p>
+                                <p className="text-right text-neutral-700 text-sm">{formatDate(val.createdAt)}</p>
                             </li>
                         )
                     })
