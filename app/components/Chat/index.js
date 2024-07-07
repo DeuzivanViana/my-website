@@ -23,6 +23,7 @@ export const Chat = () => {
             headers: {
                 "Content-Type": "application/json"
             },
+            cache: "no-store",
             body: JSON.stringify({content: content})
         })
 
@@ -35,6 +36,7 @@ export const Chat = () => {
             <NavigationBar title={`Chat Me - U${updateChat}`}/>
             <ul className="text-white m-4 flex flex-col gap-2 h-[65vh] overflow-scroll">
                 {
+                    
                     messages.map((val) => {
                         return (
                             <li className="bg-neutral-900 rounded-3xl p-4" key={val.id}>
