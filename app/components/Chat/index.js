@@ -32,7 +32,7 @@ export const Chat = () => {
 
     return (
         <Layout className={"h-[90vh]"}>
-            <NavigationBar title="Chat Me"/>
+            <NavigationBar title={`Chat Me - U${updateChat}`}/>
             <ul className="text-white m-4 flex flex-col gap-2 h-[65vh] overflow-scroll">
                 {
                     messages.map((val) => {
