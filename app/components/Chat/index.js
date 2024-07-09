@@ -6,7 +6,6 @@ import { useEffect, useState } from "react"
 
 const formatDate = (time) => {
     let date = new Date(time)
-
     return ` ${date.getDate()}/${date.getMonth()}/${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}`
 }
 
@@ -43,10 +42,9 @@ export const Chat = () => {
 
     return (
         <Layout className={"h-[90vh]"}>
-            <NavigationBar title={`Chat Me - U${updateChat}`}/>
+            <NavigationBar title={'Chat Me'}/>
             <ul className="text-white m-4 flex flex-col gap-2 h-[65vh] overflow-scroll">
                 {
-                    
                     messages.map((val) => {
                         return (
                             <li className="bg-neutral-900 rounded-3xl p-4 break-words" key={val.id}>
