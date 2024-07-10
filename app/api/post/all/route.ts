@@ -9,8 +9,7 @@ export const GET = async (req: NextRequest, {params}: any) => {
     let posts = await db.post.findMany({
       orderBy: {
         created_at: 'asc'
-      },
-      take: 8
+      }
     })
 
     if(posts == undefined)
