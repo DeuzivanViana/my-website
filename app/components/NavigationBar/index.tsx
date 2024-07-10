@@ -1,5 +1,5 @@
 'use client'
-import { Menu, MessageSquareText, BadgeHelp, CreditCard, MessageSquare, Home } from 'lucide-react'
+import { Menu, MessageSquareText, BadgeHelp, User, MessageSquare, Home, LogIn } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -22,21 +22,21 @@ export const NavigationBar = ({title = "Home"}) => {
                         </Link>
                     </li>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
-                            <MessageSquareText/>
-                            <span>Blog</span>
+                        <Link href={'/login'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                            <LogIn/>
+                            <span>Login</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'#'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
-                            <CreditCard/>
-                            <span>Pix</span>
+                        <Link href={'/profile'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                            <User/>
+                            <span>Profile</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href={'/chat'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
+                        <Link href={'/global'} className='flex gap-4 p-4 mt-1 bg-neutral-900 hover:bg-neutral-700 hover:animate-pulse border-neutral-500'>
                             <MessageSquare/>
-                            <span>Chat Me</span>
+                            <span>Chat</span>
                         </Link>
                     </li>
                     <li>
