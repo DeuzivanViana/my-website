@@ -8,6 +8,7 @@ import { Project } from "../Project";
 import { motion } from "framer-motion";
 
 import styles from "./index.module.scss";
+import { Skills } from "../Skills";
 
 const real_projects = [
   {
@@ -162,6 +163,9 @@ export const App = () => {
         >
           <strong>SKILLS</strong>
         </motion.h1>
+
+        <Skills />
+
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1.5 }}
