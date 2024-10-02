@@ -214,6 +214,7 @@ export const App = () => {
                 src_list={val.src_list}
                 href={val.href}
                 key={index}
+                techs={val.techs}
               />
             );
           })}
