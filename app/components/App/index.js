@@ -22,6 +22,7 @@ const real_projects = [
       "/projects/fehsoares_004.png",
     ],
     href: "#",
+    techs: ["NextJS"],
   },
   {
     title: "Anuncia Comigo",
@@ -33,6 +34,7 @@ const real_projects = [
       "/projects/anunciacomigo_003.png",
     ],
     href: "#",
+    techs: ["NextJS"],
   },
 ];
 
@@ -47,6 +49,7 @@ const personal_projects = [
       "/projects/sandbox_003.jpeg",
     ],
     href: "https://github.com/DeuzivanLima/Lazy-Sandbox",
+    techs: ["Python3", "Pygame"],
   },
   {
     title: "Flipper Ino - Firmware",
@@ -58,6 +61,7 @@ const personal_projects = [
       "/projects/flipper-ino-003.jpg",
     ],
     href: "https://github.com/xoksync/Flipper-Ino-A03",
+    techs: ["Arduino", "Adafruit"],
   },
   {
     title: "Fazueli Wallet",
@@ -72,6 +76,7 @@ const personal_projects = [
       "/projects/fazueli-wallet-006.png",
     ],
     href: "#",
+    techs: ["NextJS", "Redux", "SQLite3"],
   },
   {
     title: "NooBank (For Noob?)",
@@ -79,6 +84,7 @@ const personal_projects = [
       "An interface designed to be implemented in my application to simulate basic banking processes and other simple functionalities.",
     src_list: ["/projects/noobank_001.png", "/projects/noobank_002.png"],
     href: "#",
+    techs: ["NextJS"],
   },
   {
     title: "Basic Blog UI (Responsive)",
@@ -92,6 +98,7 @@ const personal_projects = [
       "/projects/blog_005.png",
     ],
     href: "#",
+    techs: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "Platform Game v1",
@@ -103,6 +110,7 @@ const personal_projects = [
       "/projects/platform_003.png",
     ],
     href: "#",
+    techs: ["C++", "SDL2"],
   },
   {
     title: "Platform Game v2",
@@ -115,6 +123,7 @@ const personal_projects = [
       "/projects/platform2_004.png",
     ],
     href: "#",
+    techs: ["C++", "SDL2"],
   },
   {
     title: "Rocket Simulation (I Think XD)",
@@ -122,6 +131,7 @@ const personal_projects = [
       "Applying the concepts of universal gravitation and particle generation, this project aims to develop my skills in gravity and rocket orbiting concepts.",
     src_list: ["/projects/rocket_001.png", "/projects/rocket_002.png"],
     href: "#",
+    techs: ["C++", "SDL2"],
   },
   {
     title: "Particle System 0.0.1",
@@ -133,6 +143,7 @@ const personal_projects = [
       "/projects/particle_003.png",
     ],
     href: "#",
+    techs: ["C++", "SDL2"],
   },
   {
     title: "Tile Loader",
@@ -145,6 +156,7 @@ const personal_projects = [
       "/projects/tileload_004.png",
     ],
     href: "#",
+    techs: ["C++", "SDL2", "TinyLoaderXML"],
   },
 ];
 
@@ -160,31 +172,7 @@ export const App = () => {
           whileInView={{ opacity: 1.5 }}
           transition={{ duration: 1 }}
           className="text-3xl text-white p-4 uppercase text-center"
-        >
-          <strong>SKILLS</strong>
-        </motion.h1>
-
-        <Skills />
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1.5 }}
-          transition={{ duration: 2 }}
-          className="text-xs text-center text-neutral-600 p-4 pt-0"
-        >
-          <strong>WARNING</strong>: Bars are for conceptual visualization of my
-          ability
-        </motion.p>
-
-        <div className={`max-w-[1500px] m-auto ${styles.bar_grid}`}>
-          <Bar
-            title={"Web Development (JavaScript, Next.JS, Prisma...)"}
-            progress={56}
-          />
-          <Bar title={"C/C++ (SDL2, SFML, ImGUI, SQLite3...)"} progress={72} />
-          <Bar title={"SQLite3, Postgres..."} progress={44} />
-          <Bar title={"Python 3.X (Pygame...)"} progress={52} />
-        </div>
+        ></motion.h1>
 
         <motion.h1
           initial={{ opacity: 0 }}
@@ -203,6 +191,7 @@ export const App = () => {
                 src_list={val.src_list}
                 href={val.href}
                 key={index}
+                techs={val.techs}
               />
             );
           })}
