@@ -1,6 +1,5 @@
 "use client";
 
-import { Bar } from "../Bar";
 import { Banner } from "../Banner";
 import { Layout } from "../Layout";
 import { NavigationBar } from "../NavigationBar";
@@ -8,7 +7,6 @@ import { Project } from "../Project";
 import { motion } from "framer-motion";
 
 import styles from "./index.module.scss";
-import { Skills } from "../Skills";
 
 const real_projects = [
   {
@@ -39,6 +37,29 @@ const real_projects = [
 ];
 
 const personal_projects = [
+  {
+    title: "Game of Life",
+    description:
+      "Game of Life is a mathematical solution in cellular automata that 'simulates' a group of entities interacting based on defined rules.",
+    src_list: [
+      "/projects/gameoflife_001.png",
+      "/projects/gameoflife_002.png",
+      "/projects/gameoflife_003.png",
+    ],
+    href: "https://github.com/DeuzivanViana/game-of-life-raylib",
+    techs: ["C++", "raylib"],
+  },
+  {
+    title: "Chess Board",
+    description: "A simple chess game with some piece logic.",
+    src_list: [
+      "/projects/chess_001.png",
+      "/projects/chess_002.png",
+      "/projects/chess_003.png",
+    ],
+    href: "#",
+    techs: ["C++", "raylib"],
+  },
   {
     title: "Sandbox - Lazy Edition",
     description:
@@ -75,7 +96,7 @@ const personal_projects = [
       "/projects/fazueli-wallet-005.png",
       "/projects/fazueli-wallet-006.png",
     ],
-    href: "#",
+    href: "https://github.com/120c0/Fazueli-Wallet",
     techs: ["NextJS", "Redux", "SQLite3"],
   },
   {
@@ -83,7 +104,7 @@ const personal_projects = [
     description:
       "An interface designed to be implemented in my application to simulate basic banking processes and other simple functionalities.",
     src_list: ["/projects/noobank_001.png", "/projects/noobank_002.png"],
-    href: "#",
+    href: "https://github.com/120c0/NoobBank-Mobile-Layout",
     techs: ["NextJS"],
   },
   {
@@ -97,7 +118,7 @@ const personal_projects = [
       "/projects/blog_004.png",
       "/projects/blog_005.png",
     ],
-    href: "#",
+    href: "https://github.com/120c0/xnork-blog-site",
     techs: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -109,7 +130,7 @@ const personal_projects = [
       "/projects/platform_002.png",
       "/projects/platform_003.png",
     ],
-    href: "#",
+    href: "https://github.com/120c0/SDL2-2D-Game-Plataform",
     techs: ["C++", "SDL2"],
   },
   {
@@ -122,7 +143,7 @@ const personal_projects = [
       "/projects/platform2_003.png",
       "/projects/platform2_004.png",
     ],
-    href: "#",
+    href: "https://github.com/120c0/SDL2-The-Last-World-test",
     techs: ["C++", "SDL2"],
   },
   {
@@ -130,7 +151,7 @@ const personal_projects = [
     description:
       "Applying the concepts of universal gravitation and particle generation, this project aims to develop my skills in gravity and rocket orbiting concepts.",
     src_list: ["/projects/rocket_001.png", "/projects/rocket_002.png"],
-    href: "#",
+    href: "https://github.com/120c0/RocketSimulator",
     techs: ["C++", "SDL2"],
   },
   {
@@ -142,7 +163,7 @@ const personal_projects = [
       "/projects/particle_002.png",
       "/projects/particle_003.png",
     ],
-    href: "#",
+    href: "https://github.com/120c0/SDL2-Particle-System",
     techs: ["C++", "SDL2"],
   },
   {
@@ -155,7 +176,7 @@ const personal_projects = [
       "/projects/tileload_003.png",
       "/projects/tileload_004.png",
     ],
-    href: "#",
+    href: "https://github.com/120c0/SDL2-Load-TMX-From-Tiled",
     techs: ["C++", "SDL2", "TinyLoaderXML"],
   },
 ];
@@ -223,7 +244,7 @@ export const App = () => {
 
       <footer className="bg-neutral-950">
         <span className="block text-neutral-700 text-xs text-center p-6">
-          © 2024 Deuzivan Lima
+          © 2024 Deuzivan Viana
         </span>
       </footer>
     </Layout>

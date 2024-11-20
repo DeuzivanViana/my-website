@@ -49,8 +49,7 @@ export const Project = ({
         </motion.div>
       </AnimatePresence>
 
-      <h1 className="text-xl ml-4 pt-[15rem] text-neutral-300">{title}</h1>
-      <p className="text-sm ml-4 text-neutral-600">12/04/2023</p>
+      <h1 className="text-xl ml-4 mt-4 pt-[15rem] text-neutral-300">{title}</h1>
       <p className="text-sm ml-4 pt-4 pb-4 text-neutral-500 mt-3">
         {description}
       </p>
