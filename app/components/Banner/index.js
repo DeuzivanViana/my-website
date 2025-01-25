@@ -13,7 +13,7 @@ export const Banner = () => {
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-5xl font-bold">
-        Hey there, i&apos;m <span className="text-[#2bbdf2]">Deuzivan</span>!
+        Hey there, i&apos;m <span className="text-[#797979]">Deuzivan</span>!
       </h1>
       <h2 className="text-white text-3xl py-2 font-bold">About Me</h2>
       <p className="text-1xl text-neutral-400 font-light">
@@ -21,7 +21,7 @@ export const Banner = () => {
         I&apos;ve been trying my whole life to evolve and learn with each new
         project.
         <br />
-        You can see my projects bellow!
+        You can see my some projects bellow!
       </p>
       <h2 className="text-white text-3xl py-2 font-bold">Languages</h2>
       <ul className="text-neutral-400">

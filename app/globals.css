@@ -11,12 +11,11 @@
 
 :root {
   --tw-bg-opacity: 1;
-  background-color: #101010;
+  background-color: #080808;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;

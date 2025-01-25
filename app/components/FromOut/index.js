@@ -3,6 +3,8 @@ import { useRef, useEffect, useState } from "react"
 import { Layout } from "../Layout"
 import { useRouter } from "next/navigation"
 
+// TODO : who ping
+
 export const FromOut = () => {
     const audioRef = useRef()
     const [isPlaying, setIsPlaying] = useState(true)
@@ -35,7 +37,7 @@ export const FromOut = () => {
 
     return (
         <Layout className="flex h-[100vh]">
-            {isPlaying ? 
+            { isPlaying ? 
                 <div className="max-w-[500px] bg-neutral-900 w-80 h-60 rounded-xl p-8 m-auto mt-40 flex flex-col justify-between">
                     <p>Quando você olha muito tempo para um abismo, o abismo olha para você.</p>
                     <button className="bg-green-400 text-neutral-950 text-sm p-2 w-20 rounded-xl relative left-[73%] block" onClick={play}>Sair</button>

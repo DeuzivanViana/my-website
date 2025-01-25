@@ -244,7 +244,7 @@ export const App = () => {
 
       <footer className="bg-neutral-950">
         <span className="block text-neutral-700 text-xs text-center p-6">
-          © 2024 Deuzivan Viana
+          © 2025 Deuzivan Viana
         </span>
       </footer>
     </Layout>

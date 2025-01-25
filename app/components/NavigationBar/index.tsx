@@ -8,7 +8,7 @@ export const NavigationBar = ({title = "Home"}) => {
 
     return (
         <>
-            <nav className='bg-neutral-950 p-6 shadow-md flex justify-between'>
+            <nav className='bg-neutral-900 p-6 shadow-md flex justify-between'>
                 <h1 className='text-white'>{title}</h1>
                 <Menu className='text-white z-50' onClick={() => setIsOpenMenu(!is_open_menu)}/>
             </nav>
