@@ -61,6 +61,30 @@ const personal_projects = [
     techs: ["C++", "raylib"],
   },
   {
+    title: "Password Generator",
+    description:
+      "A simple password generator made with Java Android.",
+    src_list: [
+      "/projects/password_generator_0001.png",
+      "/projects/password_generator_0002.png",
+      "/projects/password_generator_0003.png",
+    ],
+    href: "https://github.com/DeuzivanViana/Password-Generator",
+    techs: ["Java", "Android Studio"],
+  },
+  {
+    title: "X-File Explorer",
+    description:
+      "A simple file explorer made with Java Android. Need i to text more here?",
+    src_list: [
+      "/projects/xfile_explorer_0001.png",
+      "/projects/xfile_explorer_0002.png",
+      "/projects/xfile_explorer_0003.png",
+    ],
+    href: "https://github.com/DeuzivanViana/X-File-Manager",
+    techs: ["Java", "Android Studio"],
+  },
+  {
     title: "Sandbox - Lazy Edition",
     description:
       "A simple sandbox simulator made in Python to practice my math skills. The project is based on a generic sandbox.",
@@ -73,6 +97,18 @@ const personal_projects = [
     techs: ["Python3", "Pygame"],
   },
   {
+    title: "Planet Collision",
+    description:
+      "This is just the law of universal gravitation applied to a group of particles. It looks like a planet, at least that's what I tried to do using std::cos, std::sin and other calculations.",
+    src_list: [
+      "/projects/planet_collision_0001.png",
+      "/projects/planet_collision_0002.png",
+      "/projects/planet_collision_0003.png",
+    ],
+    href: "https://github.com/DeuzivanViana/planet-collision-simulation",
+    techs: ["C++", "raylib"],
+  },
+  {
     title: "Flipper Ino - Firmware",
     description:
       "Flipper Ino is a project inspired by Flipper Zero, aiming to provide pentest features, hardware hacking, and more. The project is currently being improved, but the basic menu is complete.",
@@ -81,8 +117,8 @@ const personal_projects = [
       "/projects/flipper-ino-002.jpg",
       "/projects/flipper-ino-003.jpg",
     ],
-    href: "https://github.com/xoksync/Flipper-Ino-A03",
-    techs: ["Arduino", "Adafruit"],
+    href: "https://github.com/DeuzivanViana/Flipper-Ino-A03",
+    techs: ["Arduino", "Adafruit", "C++"],
   },
   {
     title: "Fazueli Wallet",
