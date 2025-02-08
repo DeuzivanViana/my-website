@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Banner = () => {
   return (
     <motion.div
-      className={`${styles.container} text-white p-4 max-w-[1500px] m-auto`}
+      className={`${styles.container} text-white p-4 max-w-[1500px] m-auto mt-4`}
       initial={{ opacity: 0, x: -300 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
@@ -29,7 +29,7 @@ export const Banner = () => {
         <li className="text-1xl font-light">- English (Basic)</li>
       </ul>
 
-      <div className="flex justify-center pt-6 gap-4">
+      <div className="flex justify-center pt-8 gap-4">
         <Link href="#">
           <Instagram strokeWidth={1.5} size={32} />
         </Link>

@@ -222,7 +222,7 @@ export const App = () => {
     <Layout>
       <NavigationBar />
       <div className="m-auto">
-        <Banner />
+        <Banner/>
 
         <motion.h1
           initial={{ opacity: 0 }}

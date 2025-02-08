@@ -30,7 +30,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/components/Badge/index.js", "app/components/NavigationBar/index.js", "app/layout.js", "app/page.js"  ],
   "exclude": [
     "node_modules"
   ]
