@@ -38,6 +38,18 @@ const real_projects = [
 
 const personal_projects = [
   {
+    title: "Wallet System",
+    description:
+      "A complex values transfer between two people. I'm study auth and database.",
+    src_list: [
+      "/projects/wallet_system_001.jpeg",
+      "/projects/wallet_system_002.jpeg",
+      "/projects/wallet_system_003.jpeg",
+    ],
+    href: "https://github.com/DeuzivanViana/wallet-system",
+    techs: ["NextJS", "Supabase", "Tailwind"],
+  },
+  {
     title: "Game of Life",
     description:
       "Game of Life is a mathematical solution in cellular automata that 'simulates' a group of entities interacting based on defined rules.",
