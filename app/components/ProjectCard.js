@@ -35,9 +35,9 @@ export const ProjectCard = ({
   }, [src_lists]);
 
   return (
-    <div className="p-4 border border-neutral-800 rounded-md max-w-[512px] flex flex-col justify-between">
+    <div className="p-4 border border-neutral-800 rounded-md flex flex-col justify-between">
       <div>
-        <div className="relative w-full h-[256px] overflow-hidden">
+        <div className="relative w-full h-[40vw] max-h-[256px] overflow-hidden">
           {src_lists.map((src, index) => (
             <Image 
               key={src}

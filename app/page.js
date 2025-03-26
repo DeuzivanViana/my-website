@@ -229,7 +229,7 @@ export default function Home() {
       <NavigationBar/>
 
 
-      <div className="m-auto w-fit p-4">
+      <div className="m-auto max-w-[1500px] p-4">
         <div className="pb-16">
           <h1 className="text-6xl font-bold">
             Hey there, i&apos;m <span className="text-blue-500">Deuzivan</span>!
