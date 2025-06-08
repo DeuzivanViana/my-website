@@ -25,14 +25,14 @@ export const NavigationBar = () => {
 
   return (
     <nav className="p-6 bg-neutral-900 flex justify-between items-center relative">
-      <div className="text-white font-bold">DEUZIVAN.COM</div>
+      <div className="text-white font-bold title_hightlight">DEUZIVAN.COM</div>
       
       <ul className="hidden md:flex gap-4">
         {options.map((option, index) => (
           <li key={index}>
             <Link
               href={option.href}
-              className="text-white hover:text-gray-300 transition-colors"
+              className="text-neutral-400 hover:text-gray-300 transition-colors"
             >
               {option.name}
             </Link>
