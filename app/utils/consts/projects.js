@@ -28,6 +28,19 @@ export const real_projects = [
 
 export const personal_projects = [
   {
+    title: "Short-Link",
+    description:
+      "A applicatino to generate short-links, but this is so scratch. Have a admin dashboard and some roles to split user permissions.",
+    src_list: [
+      "/images/short_link_001.png",
+      "/images/short_link_002.png",
+      "/images/short_link_003.png",
+      "/images/short_link_004.png"
+    ],
+    href: "https://github.com/DeuzivanViana/game-of-life-raylib",
+    techs: ["C++", "raylib"],
+  },
+  {
     title: "Game of Life",
     description:
       "Game of Life is a mathematical solution in cellular automata that &apos;simulates&apos; a group of entities interacting based on defined rules.",

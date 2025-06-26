@@ -3,8 +3,6 @@ import { NavigationBar } from "@/components/NavigationBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { personal_projects, real_projects } from "./utils/consts/projects";
 
-
-
 export default function Home() {
   return (
     <Layout>
