@@ -24,6 +24,7 @@
   --gradient-alt: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
 
