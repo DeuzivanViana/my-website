@@ -5,7 +5,7 @@ import { personal_projects, real_projects } from "../utils/consts/projects";
 
 export default function Home() {
   return (
-    <Layout>
+    <div>
       <NavigationBar/>
       <div className="">
         <div className="p-6 md:p-12 header_about h-[32rem]">
@@ -56,6 +56,6 @@ export default function Home() {
           }
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
