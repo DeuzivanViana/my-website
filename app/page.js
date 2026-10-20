@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { Layout } from "@/components/Layout"
 import { NavigationBar } from "@/components/NavigationBar"
 import { ProjectCard } from "@/components/ProjectCard"
 import { personal_projects, real_projects } from "./utils/consts/projects"
@@ -31,7 +30,6 @@ export default function Home() {
         >
           Hello, friend
         </h1>
-
       </div>
     );
   }
@@ -44,7 +42,7 @@ export default function Home() {
         <div className="">
           <div className="p-6 md:p-12 header_about h-[32rem]">
             <h1 className="text-4xl md:text-8xl font-bold md:max-w-[50%]">
-              Hey there, i&apos;m <span className="text-blue-500">Deuzivan</span>!
+              Hello, i&apos;m <span className="text-blue-500">Deuzivan</span>!
             </h1>
             <p className="text-neutral-400 max-w-[512px] pb-6 pt-4">
               I&apos;ve been passionate about programming since I was 14 years old, I&apos;ve been trying my whole life to evolve and learn with each new project.
