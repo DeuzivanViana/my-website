@@ -12,7 +12,8 @@
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.98.0",
     "@vercel/analytics": "^2.0.1",
-    "lucide-react": "^0.484.0",
+    "framer-motion": "^14.6.0",
+    "lucide-react": "^1.61.0",
     "next": "^16.1.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"

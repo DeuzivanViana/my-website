@@ -1,93 +1,142 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { Bricolage_Grotesque, JetBrains_Mono } from "next/font/google"
 import { NavigationBar } from "@/components/NavigationBar"
 import { ProjectCard } from "@/components/ProjectCard"
 import { personal_projects, real_projects } from "./utils/consts/projects"
 
-export default function Home() {
-  const [videoEnded, setVideoEnded] = useState(false);
-  const [showText, setShowText] = useState(false);
+const display = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-display" })
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
-  useEffect(() => {
-    setShowText(true);
-  }, []);
+const stats = [
+  { value: "15+", label: "projects" },
+  { value: "3+", label: "years" },
+  { value: "100%", label: "dedication" },
+]
 
-  if (!videoEnded) {
-    return (
-      <div className="flex h-screen w-screen items-center justify-center bg-black overflow-hidden relative">
-        <video
-          src="/eye.mp4"
-          autoPlay
-          muted
-          playsInline
-          onEnded={() => setVideoEnded(true)}
-          className="max-h-full max-w-[80vh]"
-        />
-        <h1
-          className={`absolute top-[30%] font-bold text-2xl text-white transition-opacity duration-1000 delay-300 ease-in-out ${showText ? "opacity-100" : "opacity-0"
-            }`}
-        >
-          Hello, friend
-        </h1>
+function Section({ title, projects }) {
+  return (
+    <section className="px-4 py-12 md:px-12">
+      <h2 className="mb-8 text-3xl font-semibold tracking-tight text-white md:text-4xl">{title}</h2>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((p, i) => (
+          <ProjectCard
+            key={p.title ?? i}
+            title={p.title}
+            description={p.description}
+            href={p.href}
+            src_lists={p.src_list}
+            techs={p.techs}
+          />
+        ))}
       </div>
-    );
-  }
+    </section>
+  )
+}
+
+export default function Home() {
+  const [videoEnded, setVideoEnded] = useState(false)
 
   return (
-    <div>
-      <NavigationBar />
+    <div
+      className={`${display.variable} ${mono.variable} min-h-screen bg-[#0b0b10] text-neutral-200 [font-family:var(--font-display)] [&_.font-mono]:[font-family:var(--font-mono)]`}
+    >
+      <AnimatePresence mode="wait">
+        {!videoEnded ? (
+          <motion.div
+            key="intro"
+            exit={{ opacity: 0, scale: 1.04, filter: "blur(12px)" }}
+            transition={{ duration: 0.7 }}
+            className="relative flex h-screen w-screen items-center justify-center overflow-hidden bg-black"
+          >
+            <video
+              src="/eye.mp4"
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => setVideoEnded(true)}
+              className="max-h-full max-w-[80vh]"
+            />
+            <motion.h1
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 1 }}
+              className="absolute top-[30%] text-2xl font-bold text-white"
+            >
+              Hello, friend
+            </motion.h1>
+            <button
+              onClick={() => setVideoEnded(true)}
+              className="absolute bottom-6 right-6 rounded-full border border-white/20 px-4 py-1.5 font-mono text-xs text-neutral-300 transition hover:border-violet-400 hover:text-white"
+            >
+              skip
+            </button>
+          </motion.div>
+        ) : (
+          <motion.main key="site" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
+            <NavigationBar />
 
-      <div className="max-w-[1500px] m-auto">
-        <div className="">
-          <div className="p-6 md:p-12 header_about h-[32rem]">
-            <h1 className="text-4xl md:text-8xl font-bold md:max-w-[50%]">
-              Hello, i&apos;m <span className="text-blue-500">Deuzivan</span>!
-            </h1>
-            <p className="text-neutral-400 max-w-[512px] pb-6 pt-4">
-              I&apos;ve been passionate about programming since I was 14 years old, I&apos;ve been trying my whole life to evolve and learn with each new project.
-              You can see my some projects bellow!
-            </p>
-            <div className="flex flex-wrap gap-2 text-[8pt] md:text-lg">
-              <span className="text-neutral-400 bg-neutral-900 pr-4 pl-4 pt-2 pb-2 rounded-full border border-neutral-700">Portuguese (Native)</span>
-              <span className="text-neutral-400 bg-neutral-900 pr-4 pl-4 pt-2 pb-2 rounded-full border border-neutral-700">English (Basic)</span>
+            <div
+              aria-hidden
+              className="pointer-events-none fixed inset-0 [background:radial-gradient(60%_40%_at_20%_0%,rgba(139,92,246,.16),transparent),radial-gradient(40%_30%_at_90%_10%,rgba(34,211,238,.08),transparent)]"
+            />
+
+            <div className="relative mx-auto max-w-[1400px]">
+              <header className="px-6 pb-16 pt-20 md:px-12 md:pt-32">
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+                  className="max-w-4xl text-5xl font-bold leading-[0.95] tracking-tighter text-white md:text-8xl"
+                >
+                  Hello, I&apos;m <span className="text-violet-400">Deuzivan</span>
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                  className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-400"
+                >
+                  I&apos;ve been passionate about programming since I was 14, and I try to evolve with every new
+                  project. Some of them are below.
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8, duration: 0.8 }}
+                  className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-5"
+                >
+                  <div className="flex flex-wrap gap-2 text-sm">
+                    {["Portuguese (Native)", "English (Basic)"].map((l) => (
+                      <span
+                        key={l}
+                        className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-neutral-300"
+                      >
+                        {l}
+                      </span>
+                    ))}
+                  </div>
+                  <ul className="flex gap-8">
+                    {stats.map((s) => (
+                      <li key={s.label}>
+                        <p className="text-2xl font-semibold text-white">{s.value}</p>
+                        <p className="text-sm text-neutral-500">{s.label}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </header>
+
+              <Section title="Real projects" projects={real_projects} />
+              <Section title="Personal projects" projects={personal_projects} />
             </div>
-
-            <ul className="flex pt-6 gap-4">
-              <li className="text-center ">
-                <h1 className="font-bold text-neutral-400 text-2xl">15+</h1>
-                <footer className="text-neutral-500 text-sm">Projects</footer>
-              </li>
-              <li className="text-center ">
-                <h1 className="font-bold text-neutral-400 text-2xl">3+</h1>
-                <footer className="text-neutral-500 text-sm">Years</footer>
-              </li>
-              <li className="text-center ">
-                <h1 className="font-bold text-neutral-400 text-2xl">100%</h1>
-                <footer className="text-neutral-500 text-sm">Dedication</footer>
-              </li>
-            </ul>
-          </div>
-
-          <h1 className="text-4xl font-bold mb-4 pb-4 m-4 text-center relative">Real Projects</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit p-4 md:p-8 max-w-[100rem] m-auto">
-            {
-              real_projects.map((project, index) =>
-                <ProjectCard key={index} title={project.title} description={project.description} href={project.href} src_lists={project.src_list} techs={project.techs} />
-              )
-            }
-          </div>
-          <hr className="mt-8 mb-4 text-neutral-700" />
-          <h1 className="text-4xl font-bold mb-4 pb-4 m-4 text-center relative">Personal Projects</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-fit p-4 md:p-8 max-w-[100rem] m-auto">
-            {
-              personal_projects.map((project, index) =>
-                <ProjectCard key={index} title={project.title} description={project.description} href={project.href} src_lists={project.src_list} techs={project.techs} />
-              )
-            }
-          </div>
-        </div>
-      </div>
+          </motion.main>
+        )}
+      </AnimatePresence>
     </div>
-  );
+  )
 }
